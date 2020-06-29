@@ -86,8 +86,8 @@ These are the things which we look forward to add in the future updates:
 - GSM tracing (to help in more precice locations of users)
 
 ## Team / Collaborators
+
+- [Harsh V Sanklecha](https://github.com/Harsh-Sanklecha)
 - [Aashray Raj Mathur](https://github.com/aashrayrajm)
 - [Karthika Ponnada](https://github.com/karthika251199)
 - [Diana Susan Francis](https://github.com/Diana-999)
-- [Harsh V Sanklecha](https://github.com/Harsh-Sanklecha)
->>>>>>> 5862b8b1e5eb69f640c2c9f1c70ef39e82b2a791
