@@ -13,10 +13,10 @@ class AuthService {
   }
 
 // Function for loggin / Signing with google
-  Future loginWithGoogle() async {
+  Future<bool> loginWithGoogle() async {
       try {
-        GoogleSignIn googleSignIn = GoogleSignIn();
-        GoogleSignInAccount account = await googleSignIn.signIn();
+        GoogleSignIn _googleSignIn = GoogleSignIn();
+        GoogleSignInAccount account = await _googleSignIn.signIn();
         if(account == null )
           return false;
         AuthResult res = await _auth.signInWithCredential(GoogleAuthProvider.getCredential(
@@ -27,7 +27,7 @@ class AuthService {
         updateUserData(user);
         if(user == null)
           return false;
-        return user;
+        return true;
       } catch (e) {
         print(e.message);
         print("Error logging with google");
@@ -41,6 +41,7 @@ class AuthService {
       return ref.setData({
         'uid': user.uid,
         'name': user.displayName,
+        'profile': user.photoUrl,
       });
 }
 
